@@ -11,6 +11,7 @@
 		67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8C62CD08ACD0036711A /* ContentView.swift */; };
 		67CAF8C92CD08ACF0036711A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CAF8C82CD08ACF0036711A /* Assets.xcassets */; };
 		67CAF8CC2CD08ACF0036711A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CAF8CB2CD08ACF0036711A /* Preview Assets.xcassets */; };
+		67CAF8E32CD1893B0036711A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8E22CD1893B0036711A /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		67CAF8C62CD08ACD0036711A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67CAF8C82CD08ACF0036711A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67CAF8CB2CD08ACF0036711A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67CAF8E22CD1893B0036711A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		67CAF8E02CD1503D0036711A /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				67CAF8E22CD1893B0036711A /* MainTabView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */,
 				67CAF8C52CD08ACD0036711A /* Tiktok_TutorialApp.swift in Sources */,
+				67CAF8E32CD1893B0036711A /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
