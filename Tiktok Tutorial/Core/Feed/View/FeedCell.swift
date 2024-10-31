@@ -10,11 +10,19 @@ import AVKit
 
 struct FeedCell: View {
     let post: Post
+    // Create a reference to AVPlayer
+    // so that we can have more control of it.
+    var player: AVPlayer
+    
+    init(post: Post) {
+        self.post = post
+        self.player = AVPlayer(url: URL(string: post.videoUrl)!)
+    }
     
     var body: some View {
         ZStack {
             // Display video
-            VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
+            CustomVideoPlayer(player: player)
                 // The Contaier of this is the ScrollView when using in FeedView
                 // On this FeedCell file, the Container is the screen of the phone.
                 // Read documentation and watch video for definition.
@@ -94,6 +102,9 @@ struct FeedCell: View {
                 .padding(.bottom, 80)
             }
             .padding()
+        }
+        .onAppear {
+            //player.play()
         }
     }
 }
