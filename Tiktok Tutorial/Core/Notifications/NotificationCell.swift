@@ -17,7 +17,7 @@ struct NotificationCell: View {
             
             HStack {
                 // The "+" is to make 3 Text into 1
-                
+                // Without +, Text will look seperate.
                 Text("max.verstappen")
                     .font(.footnote)
                     .fontWeight(.semibold) +
