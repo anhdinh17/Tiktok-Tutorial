@@ -16,6 +16,8 @@
 		67CAF8E72CD24A7E0036711A /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8E62CD24A7E0036711A /* FeedCell.swift */; };
 		67CAF8E92CD29FCF0036711A /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8E82CD29FCF0036711A /* ExploreView.swift */; };
 		67CAF8EB2CD29FE10036711A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EA2CD29FE10036711A /* UserCell.swift */; };
+		67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EC2CD312E20036711A /* NotificationView.swift */; };
+		67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EE2CD312ED0036711A /* NotificationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		67CAF8E62CD24A7E0036711A /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		67CAF8E82CD29FCF0036711A /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		67CAF8EA2CD29FE10036711A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		67CAF8EC2CD312E20036711A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		67CAF8EE2CD312ED0036711A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		67CAF8DC2CD1501A0036711A /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				67CAF8EC2CD312E20036711A /* NotificationView.swift */,
+				67CAF8EE2CD312ED0036711A /* NotificationCell.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -281,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				67CAF8E52CD240880036711A /* FeedView.swift in Sources */,
+				67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */,
 				67CAF8E72CD24A7E0036711A /* FeedCell.swift in Sources */,
 				67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */,
+				67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */,
 				67CAF8C52CD08ACD0036711A /* Tiktok_TutorialApp.swift in Sources */,
 				67CAF8E92CD29FCF0036711A /* ExploreView.swift in Sources */,
 				67CAF8E32CD1893B0036711A /* MainTabView.swift in Sources */,
