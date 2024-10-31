@@ -6,22 +6,19 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct FeedCell: View {
-    let post: Int
+    let post: Post
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.pink)
+            // Display video
+            VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
                 // The Contaier of this is the ScrollView when using in FeedView
                 // On this FeedCell file, the Container is the screen of the phone.
                 // Read documentation and watch video for definition.
                 .containerRelativeFrame([.horizontal, .vertical])
-                .overlay {
-                    Text("Post \(post)")
-                        .foregroundStyle(.white)
-                }
             
             VStack {
                 Spacer()
@@ -102,5 +99,6 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell(post: 2)
+    FeedCell(post: Post(id: UUID().uuidString,
+                        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"))
 }

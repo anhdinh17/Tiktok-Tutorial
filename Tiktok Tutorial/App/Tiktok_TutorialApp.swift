@@ -11,7 +11,8 @@ import SwiftUI
 struct Tiktok_TutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            FeedView()
         }
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PostGridView: View {
+    // Chia 3 column
     private let items = [
         GridItem(.flexible(), spacing: 1),
         GridItem(.flexible(), spacing: 1),
@@ -24,6 +25,8 @@ struct PostGridView: View {
             LazyVGrid(columns: items, spacing: 2) {
                 ForEach(0 ..< 25){ post in
                     Rectangle()
+                        // Nếu không có frame thì .flexible() sẽ lấy
+                        // as much space as possible.
                         .frame(width: width, height: 160)
                         .clipped()
                 }
