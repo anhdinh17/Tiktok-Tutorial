@@ -10,13 +10,11 @@ import AVKit
 
 struct FeedCell: View {
     let post: Post
-    // Create a reference to AVPlayer
-    // so that we can have more control of it.
     var player: AVPlayer
     
-    init(post: Post) {
+    init(post: Post, player: AVPlayer) {
         self.post = post
-        self.player = AVPlayer(url: URL(string: post.videoUrl)!)
+        self.player = player
     }
     
     var body: some View {
@@ -111,5 +109,6 @@ struct FeedCell: View {
 
 #Preview {
     FeedCell(post: Post(id: UUID().uuidString,
-                        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"))
+                        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"),
+             player: AVPlayer())
 }
