@@ -57,6 +57,9 @@ struct LoginView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .padding(.vertical)
+                // Disable Button if textFields not valid
+                .disabled(!formIsValid) // formIsValid = True -> disabled = False
+                .opacity(formIsValid ? 1 : 0.7)
                 
                 Spacer()
                 
@@ -74,6 +77,16 @@ struct LoginView: View {
                 }
             }
         }
+    }
+}
+
+//MARK: - AuthenticationFormProtocol
+extension LoginView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        // Return true if email is not empty AND
+        // email contains @ AND
+        // password is not empty
+        return !email.isEmpty && email.contains("@") && !password.isEmpty
     }
 }
 
