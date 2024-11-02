@@ -12,7 +12,7 @@ import AVKit
  */
 struct FeedView: View {
     @StateObject var viewModel = FeedViewModel()
-    @State private var scrollPosition: String?
+    @State private var scrollPosition: String? // nil when initially launching this View
     @State private var player = AVPlayer()
     
     var body: some View {
@@ -21,6 +21,10 @@ struct FeedView: View {
                 ForEach(viewModel.posts) { post in
                     FeedCell(post: post, player: player)
                         .id(post.id) // Link id to scrollPosition
+                        .onAppear {
+                            // Play first post's video if neccessary
+                            playInitialVideoIfNecessary()
+                        }
                 }
             }
             .scrollTargetLayout()
@@ -44,6 +48,20 @@ struct FeedView: View {
         }
     }
     // .scrollTargetLayout and .scrollTargetBehavior make paging effect
+    
+    /// The reason we want this func is because when we initially launch the app
+    /// FeedView's scrollPosition is nil at first => video doesn't play.
+    /// "If Necessary" because when we scroll to 2nd post and scroll back to the 1st one, the video plays because
+    /// at that time, scrollPosition is not Nil anymore, it will have id of the first post.
+    func playInitialVideoIfNecessary() {
+        // Check if scrollPostion is nil, which means when we first launch FeedView
+        guard scrollPosition == nil,
+              let post = viewModel.posts.first, // get the first post
+              player.currentItem == nil else { return }
+        
+        let item = AVPlayerItem(url: URL(string: post.videoUrl)!)
+        player.replaceCurrentItem(with: item)
+    }
     
     func playVideoOnChangeOfScrollPosition(postId: String?) {
         guard let currentPost = viewModel.posts.first(where: { $0.id == postId}) else { return }

@@ -101,8 +101,19 @@ struct FeedCell: View {
             }
             .padding()
         }
-        .onAppear {
-            //player.play()
+        // Tap on FeedCell to pause/play video
+        .onTapGesture {
+            switch player.timeControlStatus {
+            // If the video is paused, play it.
+            case .paused:
+                player.play()
+            case .waitingToPlayAtSpecifiedRate:
+                break
+            case .playing:
+                player.pause()
+            @unknown default:
+                break
+            }
         }
     }
 }
