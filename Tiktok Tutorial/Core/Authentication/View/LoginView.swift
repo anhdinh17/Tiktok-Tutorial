@@ -11,6 +11,9 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     
+    // Dependency Injection
+    @StateObject var viewModel = LoginViewModel(authService: AuthService())
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -46,7 +49,10 @@ struct LoginView: View {
                 
                 // Login Button
                 Button {
-                    print("DEBUG: LOGIN")
+                    Task {
+                        await viewModel.login(withEmail:email,
+                                        password: password)
+                    }
                 } label: {
                     Text("Login")
                         .font(.subheadline)

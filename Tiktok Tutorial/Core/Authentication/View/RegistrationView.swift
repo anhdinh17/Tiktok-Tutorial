@@ -13,6 +13,7 @@ struct RegistrationView: View {
     @State var fullname = ""
     @State var username = ""
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = RegistrationViewModel(authService: AuthService())
     
     var body: some View {
         VStack {
@@ -44,7 +45,12 @@ struct RegistrationView: View {
             
             // Sign up
             Button {
-                print("DEBUG: Sign up")
+                Task {
+                    await viewModel.createUser(withEmail:email,
+                                         password: password,
+                                         username: username,
+                                         fullname: fullname)
+                }
             } label: {
                 Text("Sign Up")
                     .font(.subheadline)
