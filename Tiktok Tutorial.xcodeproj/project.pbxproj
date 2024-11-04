@@ -57,6 +57,7 @@
 		67F2F3E72CD7C1780093774B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3E62CD7C1780093774B /* AuthService.swift */; };
 		67F2F3E92CD7C4A10093774B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3E82CD7C4A10093774B /* LoginViewModel.swift */; };
 		67F2F3EB2CD7CBE10093774B /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3EA2CD7CBE10093774B /* RegistrationViewModel.swift */; };
+		67F2F3ED2CD7DC580093774B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3EC2CD7DC580093774B /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		67F2F3E62CD7C1780093774B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		67F2F3E82CD7C4A10093774B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		67F2F3EA2CD7CBE10093774B /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		67F2F3EC2CD7DC580093774B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				67CAF8C62CD08ACD0036711A /* ContentView.swift */,
+				67F2F3EC2CD7DC580093774B /* ContentViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */,
 				67F2F3B02CD68A360093774B /* StandardTextFieldModifier.swift in Sources */,
 				67F2F3E72CD7C1780093774B /* AuthService.swift in Sources */,
+				67F2F3ED2CD7DC580093774B /* ContentViewModel.swift in Sources */,
 				67F2F3982CD3AA510093774B /* UserStatView.swift in Sources */,
 				67CAF8E72CD24A7E0036711A /* FeedCell.swift in Sources */,
 				67F2F39F2CD416890093774B /* FeedViewModel.swift in Sources */,
