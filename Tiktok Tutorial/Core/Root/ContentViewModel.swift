@@ -10,11 +10,12 @@ import Firebase
 import FirebaseAuth
 import Combine
 
+@MainActor
 class ContentViewModel: ObservableObject {
     // Keep track of whether or not if someone is logged in
     @Published var userSession: FirebaseAuth.User?
     
-    // Take in an AuthService object
+    // Take in an AuthService object / Dependency Injection
     private let authService: AuthService
     private var cancellables = Set<AnyCancellable>()
     

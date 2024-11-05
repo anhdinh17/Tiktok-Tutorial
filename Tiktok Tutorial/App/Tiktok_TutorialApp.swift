@@ -21,9 +21,12 @@ struct Tiktok_TutorialApp: App {
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    // Dependency Injection
+    private let authService = AuthService()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(authService: authService)
         }
     }
 }

@@ -12,6 +12,7 @@ import FirebaseAuth
  - This class is used for Dependency Injection
  */
 
+@MainActor
 class AuthService {
     @Published var userSession: FirebaseAuth.User?
     
@@ -22,7 +23,15 @@ class AuthService {
     
     
     func login(withEmail email: String, password: String) async throws {
-        print("DEBUG: Login with email: \(email)")
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            print("DEBUG: Login user: \(result.user.uid)")
+        } catch {
+            print("DEBUG: Failed to login user \(error.localizedDescription)")
+            // Throw error here, now func is "throws"
+            throw error
+        }
     }
     
     func createUser(withEmail email: String,
@@ -31,6 +40,7 @@ class AuthService {
                     fullname: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            self.userSession =  result.user // Get user or nil
             print("DEBUG: Create user: \(result.user.uid)")
         } catch {
             print("DEBUG: Failed to create user \(error.localizedDescription)")
@@ -40,7 +50,12 @@ class AuthService {
     }
     
     func signout() {
-        
+        do {
+            try Auth.auth().signOut() // Sign out on backend
+            self.userSession = nil // Updates routing logic by wiping userSession
+        } catch {
+            print("DEBUG: Failed to sign out")
+        }
     }
     
 }
