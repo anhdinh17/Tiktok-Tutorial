@@ -18,6 +18,8 @@
 		67CAF8EB2CD29FE10036711A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EA2CD29FE10036711A /* UserCell.swift */; };
 		67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EC2CD312E20036711A /* NotificationView.swift */; };
 		67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EE2CD312ED0036711A /* NotificationCell.swift */; };
+		67E6DC472CDAAA6600610896 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC462CDAAA6600610896 /* User.swift */; };
+		67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC492CDAAC1F00610896 /* UserService.swift */; };
 		67F2F3902CD39D8E0093774B /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */; };
 		67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */; };
 		67F2F3942CD3A7200093774B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3932CD3A7200093774B /* PostGridView.swift */; };
@@ -73,6 +75,8 @@
 		67CAF8EA2CD29FE10036711A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		67CAF8EC2CD312E20036711A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		67CAF8EE2CD312ED0036711A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		67E6DC462CDAAA6600610896 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		67E6DC492CDAAC1F00610896 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		67F2F3932CD3A7200093774B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			children = (
 				67CAF8C32CD08ACD0036711A /* Tiktok Tutorial */,
 				67CAF8C22CD08ACD0036711A /* Products */,
+				67E6DC482CDAAC0D00610896 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +182,7 @@
 		67CAF8D32CD14F010036711A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				67E6DC492CDAAC1F00610896 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				67F2F3992CD416080093774B /* Post.swift */,
+				67E6DC462CDAAA6600610896 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +314,13 @@
 			children = (
 			);
 			path = UploadMedia;
+			sourceTree = "<group>";
+		};
+		67E6DC482CDAAC0D00610896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		67F2F3952CD3AA380093774B /* Components */ = {
@@ -495,8 +509,10 @@
 				67CAF8E52CD240880036711A /* FeedView.swift in Sources */,
 				67F2F3A12CD423A80093774B /* CustomVideoPlayer.swift in Sources */,
 				67F2F3E92CD7C4A10093774B /* LoginViewModel.swift in Sources */,
+				67E6DC472CDAAA6600610896 /* User.swift in Sources */,
 				67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */,
 				67F2F3AE2CD6884E0093774B /* RegistrationView.swift in Sources */,
+				67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */,
 				67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */,
 				67F2F3B02CD68A360093774B /* StandardTextFieldModifier.swift in Sources */,
 				67F2F3E72CD7C1780093774B /* AuthService.swift in Sources */,
