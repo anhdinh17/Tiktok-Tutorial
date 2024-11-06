@@ -65,6 +65,7 @@ class AuthService {
         }
     }
     
+    // Upload user's info when signing up
     private func uploadUserData(withEmail email: String,
                                 id: String,
                                 username: String,

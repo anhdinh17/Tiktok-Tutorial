@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ExploreView: View {
+    // It's ok to create an instance of UserService and pass to VM once this screen displayed.
+    // Because as of now, UserService doesn't have any properties to publish changes which
+    // other screens/views are dependent on.
+    @StateObject var viewModel = ExploreViewModel(userService: MockUserService())
+    
     var body: some View {
         NavigationStack{
             ScrollView {
                 LazyVStack(spacing: 16) {
-                    ForEach(0 ..< 20) { user in
-                        UserCell()
+                    ForEach(viewModel.users) { user in
+                        UserCell(user: user)
                     }
                 }
             }

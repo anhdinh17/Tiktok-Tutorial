@@ -20,6 +20,8 @@
 		67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF8EE2CD312ED0036711A /* NotificationCell.swift */; };
 		67E6DC472CDAAA6600610896 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC462CDAAA6600610896 /* User.swift */; };
 		67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC492CDAAC1F00610896 /* UserService.swift */; };
+		67E6DC4C2CDB909900610896 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC4B2CDB909900610896 /* PreviewProvider.swift */; };
+		67E6DC502CDB953800610896 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC4F2CDB953800610896 /* ExploreViewModel.swift */; };
 		67F2F3902CD39D8E0093774B /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */; };
 		67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */; };
 		67F2F3942CD3A7200093774B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3932CD3A7200093774B /* PostGridView.swift */; };
@@ -77,6 +79,8 @@
 		67CAF8EE2CD312ED0036711A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		67E6DC462CDAAA6600610896 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		67E6DC492CDAAC1F00610896 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		67E6DC4B2CDB909900610896 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		67E6DC4F2CDB953800610896 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		67F2F3932CD3A7200093774B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		67CAF8D52CD14F060036711A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				67E6DC4B2CDB909900610896 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,8 +300,8 @@
 		67CAF8DF2CD150320036711A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				67CAF8E82CD29FCF0036711A /* ExploreView.swift */,
-				67CAF8EA2CD29FE10036711A /* UserCell.swift */,
+				67E6DC4E2CDB950100610896 /* View */,
+				67E6DC4D2CDB94FE00610896 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -321,6 +326,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67E6DC4D2CDB94FE00610896 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				67E6DC4F2CDB953800610896 /* ExploreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67E6DC4E2CDB950100610896 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67CAF8E82CD29FCF0036711A /* ExploreView.swift */,
+				67CAF8EA2CD29FE10036711A /* UserCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		67F2F3952CD3AA380093774B /* Components */ = {
@@ -513,6 +535,7 @@
 				67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */,
 				67F2F3AE2CD6884E0093774B /* RegistrationView.swift in Sources */,
 				67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */,
+				67E6DC4C2CDB909900610896 /* PreviewProvider.swift in Sources */,
 				67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */,
 				67F2F3B02CD68A360093774B /* StandardTextFieldModifier.swift in Sources */,
 				67F2F3E72CD7C1780093774B /* AuthService.swift in Sources */,
@@ -525,6 +548,7 @@
 				67F2F3EB2CD7CBE10093774B /* RegistrationViewModel.swift in Sources */,
 				67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */,
 				67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */,
+				67E6DC502CDB953800610896 /* ExploreViewModel.swift in Sources */,
 				67F2F3AC2CD688450093774B /* LoginView.swift in Sources */,
 				67CAF8C52CD08ACD0036711A /* Tiktok_TutorialApp.swift in Sources */,
 				67CAF8E92CD29FCF0036711A /* ExploreView.swift in Sources */,
