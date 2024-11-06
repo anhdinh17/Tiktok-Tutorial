@@ -16,7 +16,7 @@ struct CurrentUserProfileView: View {
             ScrollView {
                 VStack {
                     // Profile Header
-                    ProfileHeaderView()
+                    ProfileHeaderView(user: DeveloperPreview.user)
                     
                     // Post grid view
                     PostGridView()

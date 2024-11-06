@@ -18,10 +18,17 @@ struct ExploreView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.users) { user in
-                        UserCell(user: user)
+                        // Click on this and go to UserProfileView
+                        NavigationLink(value: user) {
+                            UserCell(user: user)
+                        }
                     }
                 }
             }
+            //MARK: - navigate to a user's profile view
+            .navigationDestination(for: User.self, destination: { user in
+                UserProfileView(user: user)
+            })
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
         }

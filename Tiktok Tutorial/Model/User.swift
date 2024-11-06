@@ -16,3 +16,6 @@ struct User: Identifiable, Codable {
     var bio: String?
     var profileImageUrl: String?
 }
+
+// For NavigationLink(value:)
+extension User: Hashable { }
