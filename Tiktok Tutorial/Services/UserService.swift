@@ -16,11 +16,21 @@ protocol UserServiceProtocol {
 // We can use struct here because it's lightweight and faster
 struct UserService: UserServiceProtocol {
     
+    // Fetch current user's info
+    // Return optional because there may not be a logged in user
+    func fetchCurrentUser() async throws -> User? {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return nil }
+        // Go to this path and get current user
+        let currentUser = try await FirestoreConstants.UserCollection.document(currentUid).getDocument(as: User.self)
+        print("DEBUG: Current user = \(currentUser)")
+        return currentUser
+    }
+    
     func uploadUserData(_ user: User) async throws {
         do {
             let userData = try Firestore.Encoder().encode(user)
             // Create path to set data
-            try await Firestore.firestore().collection("users").document(user.id).setData(userData)
+            try await FirestoreConstants.UserCollection.document(user.id).setData(userData)
         } catch {
             throw error
         }
@@ -28,7 +38,7 @@ struct UserService: UserServiceProtocol {
     
     func fetchUsers() async throws -> [User]  {
         // Go to "users" collection and fetch all users in there
-        let snapshot = try await Firestore.firestore().collection("users").getDocuments()
+        let snapshot = try await FirestoreConstants.UserCollection.getDocuments()
         let users = snapshot.documents.compactMap({ try? $0.data(as: User.self) })
         return users
     }

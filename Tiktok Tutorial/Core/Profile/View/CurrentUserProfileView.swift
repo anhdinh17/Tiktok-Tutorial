@@ -10,13 +10,14 @@ import SwiftUI
 struct CurrentUserProfileView: View {
     // Dependency Injection to use AuthService
     let authService: AuthService
+    let user: User
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
                     // Profile Header
-                    ProfileHeaderView(user: DeveloperPreview.user)
+                    ProfileHeaderView(user: user)
                     
                     // Post grid view
                     PostGridView()
@@ -42,5 +43,6 @@ struct CurrentUserProfileView: View {
 }
 
 #Preview {
-    CurrentUserProfileView(authService: AuthService())
+    CurrentUserProfileView(authService: AuthService(),
+                           user: DeveloperPreview.user)
 }

@@ -18,6 +18,7 @@ struct ExploreView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.users) { user in
+                        // Each UserCell is a NavLink
                         // Click on this and go to UserProfileView
                         NavigationLink(value: user) {
                             UserCell(user: user)

@@ -35,6 +35,9 @@ struct FeedView: View {
             // I think we combine this with stuff in .onChange
             // so that everytime we scroll, the video of new post plays.
         }
+        // Stop the video if we move to other screens or
+        // away from this view.
+        .onDisappear { player.pause() }
         .scrollPosition(id: $scrollPosition)
         .scrollTargetBehavior(.paging)
         .ignoresSafeArea()

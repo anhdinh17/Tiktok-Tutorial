@@ -9,12 +9,13 @@ import SwiftUI
 
 struct MainTabView: View {
     @State var selectedTab = 0
-    
     // Dependency Injection
     let authService: AuthService
+    let user: User // current user
     
-    init(authService: AuthService) {
+    init(authService: AuthService, user: User) {
         self.authService = authService
+        self.user = user
     }
     
     var body: some View {
@@ -61,7 +62,7 @@ struct MainTabView: View {
                 .onAppear{ selectedTab = 3}
                 .tag(3)
             
-            CurrentUserProfileView(authService: authService)
+            CurrentUserProfileView(authService: authService, user: user)
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 4 ? "person.fill" : "person")
@@ -77,5 +78,6 @@ struct MainTabView: View {
 }
 
 #Preview {
-    MainTabView(authService: AuthService())
+    MainTabView(authService: AuthService(),
+                user: DeveloperPreview.user)
 }

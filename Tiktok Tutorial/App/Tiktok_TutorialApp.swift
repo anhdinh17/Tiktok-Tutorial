@@ -23,10 +23,14 @@ struct Tiktok_TutorialApp: App {
     
     // Dependency Injection
     private let authService = AuthService()
+    // As of 11/07/24, we inject this guy to follow Dependency Injection pattern.
+    // But this guy for now is just for calling functions, it doesn't have any
+    // properties that other views are dependent on.
+    private let userSerivce = UserService()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(authService: authService)
+            ContentView(authService: authService, userService: userSerivce)
         }
     }
 }

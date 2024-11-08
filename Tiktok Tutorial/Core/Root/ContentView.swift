@@ -12,16 +12,22 @@ struct ContentView: View {
     
     // Dependency Injection
     private let authService: AuthService
+    private let userService: UserService
     
-    init(authService: AuthService) {
+    init(authService: AuthService, userService: UserService) {
         self.authService = authService
-        self._viewModel = StateObject(wrappedValue: ContentViewModel(authService: authService))
+        self.userService = userService
+        
+        self._viewModel = StateObject(wrappedValue: ContentViewModel(authService: authService, userService: userService))
     }
     
     var body: some View {
         Group {
-            if viewModel.userSession != nil {
-                MainTabView(authService: authService)
+            if viewModel.userSession != nil
+            {
+                if let currentUser = viewModel.currentUser {
+                    MainTabView(authService: authService, user: currentUser)
+                }
             } else {
                 LoginView(authService: authService)
             }
@@ -30,5 +36,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(authService: AuthService())
+    ContentView(authService: AuthService(), userService: UserService())
 }
