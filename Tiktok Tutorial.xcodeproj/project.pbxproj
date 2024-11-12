@@ -25,6 +25,7 @@
 		67E6DC522CDBF53200610896 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC512CDBF53200610896 /* UserProfileView.swift */; };
 		67E6DC552CDD5F7B00610896 /* Firestroe+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC542CDD5F7B00610896 /* Firestroe+Constants.swift */; };
 		67E6DC592CDF871B00610896 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC582CDF871B00610896 /* EditProfileView.swift */; };
+		67E6DC5C2CE3BEF000610896 /* EditProfileOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC5B2CE3BEF000610896 /* EditProfileOptions.swift */; };
 		67F2F3902CD39D8E0093774B /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */; };
 		67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */; };
 		67F2F3942CD3A7200093774B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3932CD3A7200093774B /* PostGridView.swift */; };
@@ -87,6 +88,7 @@
 		67E6DC512CDBF53200610896 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		67E6DC542CDD5F7B00610896 /* Firestroe+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestroe+Constants.swift"; sourceTree = "<group>"; };
 		67E6DC582CDF871B00610896 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		67E6DC5B2CE3BEF000610896 /* EditProfileOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptions.swift; sourceTree = "<group>"; };
 		67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		67F2F3932CD3A7200093774B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		67E6DC562CDF870500610896 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				67E6DC5A2CE3BECA00610896 /* Model */,
 				67E6DC572CDF870C00610896 /* Views */,
 			);
 			path = EditProfile;
@@ -375,6 +378,14 @@
 				67E6DC582CDF871B00610896 /* EditProfileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		67E6DC5A2CE3BECA00610896 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67E6DC5B2CE3BEF000610896 /* EditProfileOptions.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		67F2F3952CD3AA380093774B /* Components */ = {
@@ -583,6 +594,7 @@
 				67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */,
 				67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */,
 				67E6DC592CDF871B00610896 /* EditProfileView.swift in Sources */,
+				67E6DC5C2CE3BEF000610896 /* EditProfileOptions.swift in Sources */,
 				67E6DC502CDB953800610896 /* ExploreViewModel.swift in Sources */,
 				67F2F3AC2CD688450093774B /* LoginView.swift in Sources */,
 				67CAF8C52CD08ACD0036711A /* Tiktok_TutorialApp.swift in Sources */,

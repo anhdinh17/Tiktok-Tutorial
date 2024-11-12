@@ -46,29 +46,12 @@ struct EditProfileView: View {
                     Text("About you")
                         .foregroundStyle(Color(.systemGray2))
                     
-                    HStack {
-                        Text("Name")
-                        
-                        Spacer()
-                        
-                        Text("Lewis Hamilton")
-                    }
-                    
-                    HStack {
-                        Text("Username")
-                        
-                        Spacer()
-                        
-                        Text("@lewis_hamilton")
-                    }
-                    
-                    HStack {
-                        Text("Bio")
-                        
-                        Spacer()
-                        
-                        Text("Add a bio")
-                    }
+                    EditProfileOptionRowView(option: EditProfileOptions.name,
+                                  value: "Lewis Hamilton")
+                    EditProfileOptionRowView(option: EditProfileOptions.username,
+                                  value: "@lewis_hamilton")
+                    EditProfileOptionRowView(option: EditProfileOptions.bio,
+                                  value: "F1 driver")
                 }
                 .fontWeight(.semibold)
                 .padding()
@@ -82,6 +65,9 @@ struct EditProfileView: View {
             }
             .navigationTitle("Edit Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: EditProfileOptions.self, destination: { option in
+                Text(option.title)
+            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -119,4 +105,23 @@ extension EditProfileView {
 
 #Preview {
     EditProfileView()
+}
+
+struct EditProfileOptionRowView: View {
+    let option: EditProfileOptions
+    let value: String
+    
+    var body: some View {
+        // Take in an enum
+        NavigationLink(value: option) {
+            HStack {
+                Text(option.title)
+                
+                Spacer()
+                
+                Text(value)
+            }
+        }
+        .foregroundStyle(.primary)
+    }
 }
