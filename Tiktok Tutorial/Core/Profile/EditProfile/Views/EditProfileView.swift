@@ -9,10 +9,14 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
+    @Environment(\.dismiss) var dismiss
     // This guy is for the binding with PhotosPicker()
     // What we select will bind to this one.
     @State private var selectedPickerItem: PhotosPickerItem?
     @State private var profileImage: Image?
+    
+    // Input parameter
+    let user: User
     
     var body: some View {
         NavigationStack {
@@ -47,11 +51,11 @@ struct EditProfileView: View {
                         .foregroundStyle(Color(.systemGray2))
                     
                     EditProfileOptionRowView(option: EditProfileOptions.name,
-                                  value: "Lewis Hamilton")
+                                             value: user.fullname)
                     EditProfileOptionRowView(option: EditProfileOptions.username,
-                                  value: "@lewis_hamilton")
+                                             value: user.username)
                     EditProfileOptionRowView(option: EditProfileOptions.bio,
-                                  value: "F1 driver")
+                                             value: user.bio ?? "Add your bio")
                 }
                 .fontWeight(.semibold)
                 .padding()
@@ -65,13 +69,14 @@ struct EditProfileView: View {
             }
             .navigationTitle("Edit Profile")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: EditProfileOptions.self, destination: { option in
-                Text(option.title)
-            })
+            // Dựa vào enum mà hiển thị View sử dụng properties của enum.
+            .navigationDestination(for: EditProfileOptions.self) { option in
+                EditProfileDetailView(option: option, user: user)
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        
+                        dismiss()
                     } label: {
                         Text("Cancel")
                             .fontWeight(.semibold)
@@ -81,7 +86,7 @@ struct EditProfileView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        dismiss()
                     } label: {
                         Text("Done")
                             .fontWeight(.semibold)
@@ -104,24 +109,5 @@ extension EditProfileView {
 }
 
 #Preview {
-    EditProfileView()
-}
-
-struct EditProfileOptionRowView: View {
-    let option: EditProfileOptions
-    let value: String
-    
-    var body: some View {
-        // Take in an enum
-        NavigationLink(value: option) {
-            HStack {
-                Text(option.title)
-                
-                Spacer()
-                
-                Text(value)
-            }
-        }
-        .foregroundStyle(.primary)
-    }
+    EditProfileView(user: DeveloperPreview.user)
 }

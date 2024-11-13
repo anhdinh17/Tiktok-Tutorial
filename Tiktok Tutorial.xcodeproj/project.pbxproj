@@ -26,6 +26,8 @@
 		67E6DC552CDD5F7B00610896 /* Firestroe+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC542CDD5F7B00610896 /* Firestroe+Constants.swift */; };
 		67E6DC592CDF871B00610896 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC582CDF871B00610896 /* EditProfileView.swift */; };
 		67E6DC5C2CE3BEF000610896 /* EditProfileOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC5B2CE3BEF000610896 /* EditProfileOptions.swift */; };
+		67E6DC5E2CE4177A00610896 /* EditProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC5D2CE4177A00610896 /* EditProfileDetailView.swift */; };
+		67E6DC602CE453D400610896 /* EditProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC5F2CE453D400610896 /* EditProfileOptionRowView.swift */; };
 		67F2F3902CD39D8E0093774B /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */; };
 		67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */; };
 		67F2F3942CD3A7200093774B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3932CD3A7200093774B /* PostGridView.swift */; };
@@ -89,6 +91,8 @@
 		67E6DC542CDD5F7B00610896 /* Firestroe+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestroe+Constants.swift"; sourceTree = "<group>"; };
 		67E6DC582CDF871B00610896 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		67E6DC5B2CE3BEF000610896 /* EditProfileOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptions.swift; sourceTree = "<group>"; };
+		67E6DC5D2CE4177A00610896 /* EditProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDetailView.swift; sourceTree = "<group>"; };
+		67E6DC5F2CE453D400610896 /* EditProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOptionRowView.swift; sourceTree = "<group>"; };
 		67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		67F2F3932CD3A7200093774B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -376,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				67E6DC582CDF871B00610896 /* EditProfileView.swift */,
+				67E6DC5D2CE4177A00610896 /* EditProfileDetailView.swift */,
+				67E6DC5F2CE453D400610896 /* EditProfileOptionRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */,
 				67E6DC552CDD5F7B00610896 /* Firestroe+Constants.swift in Sources */,
 				67E6DC4C2CDB909900610896 /* PreviewProvider.swift in Sources */,
+				67E6DC5E2CE4177A00610896 /* EditProfileDetailView.swift in Sources */,
 				67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */,
 				67F2F3B02CD68A360093774B /* StandardTextFieldModifier.swift in Sources */,
 				67F2F3E72CD7C1780093774B /* AuthService.swift in Sources */,
@@ -593,6 +600,7 @@
 				67F2F3EB2CD7CBE10093774B /* RegistrationViewModel.swift in Sources */,
 				67CAF8C72CD08ACD0036711A /* ContentView.swift in Sources */,
 				67CAF8ED2CD312E20036711A /* NotificationView.swift in Sources */,
+				67E6DC602CE453D400610896 /* EditProfileOptionRowView.swift in Sources */,
 				67E6DC592CDF871B00610896 /* EditProfileView.swift in Sources */,
 				67E6DC5C2CE3BEF000610896 /* EditProfileOptions.swift in Sources */,
 				67E6DC502CDB953800610896 /* ExploreViewModel.swift in Sources */,
