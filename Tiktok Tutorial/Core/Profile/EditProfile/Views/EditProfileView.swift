@@ -14,6 +14,11 @@ struct EditProfileView: View {
     // What we select will bind to this one.
     @State private var selectedPickerItem: PhotosPickerItem?
     @State private var profileImage: Image?
+    @State private var uiImage: UIImage?
+    
+    // Take in an instance of ImageUploader().
+    // This instance is just to run funcs, nothing special or publishing anything.
+    @StateObject private var manager = EditProfileManager(imageUploader: ImageUploader())
     
     // Input parameter
     let user: User
@@ -86,7 +91,7 @@ struct EditProfileView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        dismiss()
+                        onDoneTapped()
                     } label: {
                         Text("Done")
                             .fontWeight(.semibold)
@@ -104,7 +109,17 @@ extension EditProfileView {
         guard let item else { return }
         guard let data = try? await item.loadTransferable(type: Data.self) else { return }
         guard let uiImage = UIImage(data: data) else { return }
+        // make sure to have this one so we can use uiImage in onDoneTapped()
+        self.uiImage = uiImage
         self.profileImage = Image(uiImage: uiImage)
+    }
+    
+    func onDoneTapped() {
+        Task {
+            guard let uiImage else { return }
+            await manager.uploadProfileImage(uiImage)
+            dismiss()
+        }
     }
 }
 
