@@ -31,18 +31,18 @@ struct EditProfileView: View {
                 // -> profileImage gets image and displays.
                 PhotosPicker(selection: $selectedPickerItem, matching: .images) {
                     VStack {
+                        // Select an image
                         if let image = profileImage {
                             image
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 64, height: 64)
+                                .frame(width: avatarSize.dimension, height: avatarSize.dimension)
                                 .clipShape(Circle())
                         } else {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 64, height: 64)
-                                .foregroundStyle(Color(.systemGray4))
+                            // If we don't select an image, we use
+                            // AvatarView.
+                            // avatarSize = AvatarSize.large
+                            AvatarView(user: user, size: avatarSize)
                         }
                         
                         Text("Change Photo")
@@ -120,6 +120,10 @@ extension EditProfileView {
             await manager.uploadProfileImage(uiImage)
             dismiss()
         }
+    }
+    
+    var avatarSize: AvatarSize {
+        return .large
     }
 }
 

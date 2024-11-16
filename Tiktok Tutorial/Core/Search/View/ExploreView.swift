@@ -11,7 +11,7 @@ struct ExploreView: View {
     // It's ok to create an instance of UserService and pass to VM once this screen displayed.
     // Because as of now, UserService doesn't have any properties to publish changes which
     // other screens/views are dependent on.
-    @StateObject var viewModel = ExploreViewModel(userService: MockUserService())
+    @StateObject var viewModel = ExploreViewModel(userService: UserService())
     
     var body: some View {
         NavigationStack{
