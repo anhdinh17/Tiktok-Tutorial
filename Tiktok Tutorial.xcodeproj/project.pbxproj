@@ -33,6 +33,8 @@
 		67E6DC692CE687F000610896 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 67E6DC682CE687F000610896 /* Kingfisher */; };
 		67E6DC6E2CE6889200610896 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC6D2CE6889200610896 /* AvatarView.swift */; };
 		67E6DC702CE68AAF00610896 /* AvatarSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC6F2CE68AAF00610896 /* AvatarSize.swift */; };
+		67E6DC732CE9151000610896 /* MediaSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC722CE9150F00610896 /* MediaSelectorView.swift */; };
+		67E6DC752CE91AE800610896 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6DC742CE91AE800610896 /* UploadPostView.swift */; };
 		67F2F3902CD39D8E0093774B /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */; };
 		67F2F3922CD3A70B0093774B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */; };
 		67F2F3942CD3A7200093774B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2F3932CD3A7200093774B /* PostGridView.swift */; };
@@ -102,6 +104,8 @@
 		67E6DC652CE5AFCF00610896 /* EditProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileManager.swift; sourceTree = "<group>"; };
 		67E6DC6D2CE6889200610896 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		67E6DC6F2CE68AAF00610896 /* AvatarSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSize.swift; sourceTree = "<group>"; };
+		67E6DC722CE9150F00610896 /* MediaSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSelectorView.swift; sourceTree = "<group>"; };
+		67E6DC742CE91AE800610896 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		67F2F38F2CD39D8E0093774B /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		67F2F3912CD3A70B0093774B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		67F2F3932CD3A7200093774B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 		67CAF8E12CD150440036711A /* UploadMedia */ = {
 			isa = PBXGroup;
 			children = (
+				67E6DC712CE914EC00610896 /* Views */,
 				67E6DC612CE5A1F200610896 /* Service */,
 			);
 			path = UploadMedia;
@@ -446,6 +451,15 @@
 				67E6DC6D2CE6889200610896 /* AvatarView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		67E6DC712CE914EC00610896 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67E6DC722CE9150F00610896 /* MediaSelectorView.swift */,
+				67E6DC742CE91AE800610896 /* UploadPostView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		67F2F3952CD3AA380093774B /* Components */ = {
@@ -639,6 +653,7 @@
 				67F2F3E92CD7C4A10093774B /* LoginViewModel.swift in Sources */,
 				67E6DC472CDAAA6600610896 /* User.swift in Sources */,
 				67CAF8EF2CD312ED0036711A /* NotificationCell.swift in Sources */,
+				67E6DC732CE9151000610896 /* MediaSelectorView.swift in Sources */,
 				67F2F3AE2CD6884E0093774B /* RegistrationView.swift in Sources */,
 				67E6DC4A2CDAAC1F00610896 /* UserService.swift in Sources */,
 				67E6DC632CE5A21700610896 /* ImageUploader.swift in Sources */,
@@ -654,6 +669,7 @@
 				67F2F3982CD3AA510093774B /* UserStatView.swift in Sources */,
 				67CAF8E72CD24A7E0036711A /* FeedCell.swift in Sources */,
 				67F2F39F2CD416890093774B /* FeedViewModel.swift in Sources */,
+				67E6DC752CE91AE800610896 /* UploadPostView.swift in Sources */,
 				67F2F39A2CD416080093774B /* Post.swift in Sources */,
 				67F2F3B22CD6BDD50093774B /* AuthenticationFormProtocol.swift in Sources */,
 				67F2F3EB2CD7CBE10093774B /* RegistrationViewModel.swift in Sources */,
